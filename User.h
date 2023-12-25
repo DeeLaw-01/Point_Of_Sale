@@ -2,14 +2,17 @@
 using namespace System;
 ref class User
 {
-private:
-	System::String^ username;
-	System::String^ password;
 public:
-	String^ GetUsername();
-	void SetUsername(String^ username);
-	String^ GetPassword();
-	void SetPassword(String^ password);
+	// Static so it can be accessed without creating an instance. This prevents a future circular dependancy.
+	static System::String^ username;
+	static System::String^ password;
+	
+public: 
+	static String^ GetUsername();
+	static void SetUsername(String^ newUsername);
+	static String^ GetPassword();
+	static void SetPassword(String^ newPassword);
+	
 };
 
 

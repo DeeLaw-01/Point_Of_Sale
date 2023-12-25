@@ -27,6 +27,9 @@
     <ClCompile Include="ModifyMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UserHomePage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -53,10 +56,10 @@
     <ClInclude Include="ManageMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="List.h">
+    <ClInclude Include="ModifyMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ModifyMenu.h">
+    <ClInclude Include="UserHomePage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

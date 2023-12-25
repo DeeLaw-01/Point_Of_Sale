@@ -4,6 +4,7 @@
 #include "RegisterEmployee.h"
 #include "ForgotPassword.h"
 #include "User.h"
+#include "UserHomePage.h"
 
 
 // temp variable
@@ -25,8 +26,6 @@ namespace POS {
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
-		// Create a static instance of the user identity so it can be accessed without having to create another instance of this class
-		static User^ CurrUser = gcnew User;
 		 
 		MyForm(void)
 		{
@@ -729,7 +728,11 @@ namespace POS {
 			return;
 		}
 		// If matched:
+		User^ CurrUser = gcnew User;
+		CurrUser->SetUsername(Username);
+		CurrUser->SetPassword(Password);
 		if (isAdmin) {
+			User^ CurrUser = gcnew User;
 			CurrUser->SetUsername(Username);
 			CurrUser->SetPassword(Password);
 			// Log User to textfile
@@ -740,8 +743,13 @@ namespace POS {
 			this->Hide();
 			adminHomeScreen->ShowDialog();
 			this->Show();
+			return;
 		}
 		AuthUser->Loguser(Log_TB_Username->Text);
+		UserHomePage^ UHP = gcnew UserHomePage;
+		this->Hide();
+		UHP->ShowDialog();
+		this->Show();
 		//Show Employee Screen
 		// Log user to file
 

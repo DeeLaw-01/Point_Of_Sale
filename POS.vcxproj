@@ -125,6 +125,7 @@
     <ClCompile Include="ModifyMenu.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="User.cpp" />
+    <ClCompile Include="UserHomePage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdminHomeScreen.h">
@@ -134,7 +135,6 @@
     <ClInclude Include="ForgotPassword.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="List.h" />
     <ClInclude Include="ManageMenu.h" />
     <ClInclude Include="ModifyMenu.h">
       <FileType>CppForm</FileType>
@@ -149,6 +149,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="User.h" />
+    <ClInclude Include="UserHomePage.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AdminHomeScreen.resx">
@@ -168,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TermsAndConditions.resx">
       <DependentUpon>TermsAndConditions.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHomePage.resx">
+      <DependentUpon>UserHomePage.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

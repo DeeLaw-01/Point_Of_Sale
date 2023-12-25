@@ -1,5 +1,6 @@
 #pragma once
 #include "ManageMenu.h"
+#include "RegisterEmployee.h"
 #include "ModifyMenu.h"
 namespace POS {
 
@@ -40,21 +41,29 @@ namespace POS {
 	protected:
 
 	private: System::Windows::Forms::Panel^ AHS_Panel_Controls;
-	private: System::Windows::Forms::Panel^ AHS_Panel_UsernamePanel;
-	private: System::Windows::Forms::PictureBox^ AHS_PB_UserImage;
-	private: System::Windows::Forms::Label^ AHS_L_Username;
+
+
+
 	private: System::Windows::Forms::Button^ AHS_BTN_ModifyMenu;
 	private: System::Windows::Forms::Button^ AHS_BTN_ModifyUser;
 
 
-	private: System::Windows::Forms::FlowLayoutPanel^ AHS_Panel_Bill;
-	private: System::Windows::Forms::PrintDialog^ printDialog1;
+
+
 	private: System::Windows::Forms::FlowLayoutPanel^ AHS_Panel_InnerModifyMenu;
 	private: System::Windows::Forms::Panel^ AHS_Panel_OuterModifyMenu;
 	private: System::Windows::Forms::Label^ AHS_L_ModifyMenu;
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+
+
+
+
 
 	private:
 		/// <summary>
@@ -71,167 +80,51 @@ namespace POS {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AdminHomeScreen::typeid));
 			this->AHS_Panel_Parent = (gcnew System::Windows::Forms::Panel());
-			this->AHS_Panel_Bill = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->AHS_Panel_Controls = (gcnew System::Windows::Forms::Panel());
-			this->AHS_Panel_UsernamePanel = (gcnew System::Windows::Forms::Panel());
-			this->AHS_PB_UserImage = (gcnew System::Windows::Forms::PictureBox());
-			this->AHS_L_Username = (gcnew System::Windows::Forms::Label());
-			this->AHS_BTN_ModifyMenu = (gcnew System::Windows::Forms::Button());
-			this->AHS_BTN_ModifyUser = (gcnew System::Windows::Forms::Button());
-			this->printDialog1 = (gcnew System::Windows::Forms::PrintDialog());
+			this->AHS_Panel_OuterModifyMenu = (gcnew System::Windows::Forms::Panel());
+			this->AHS_L_ModifyMenu = (gcnew System::Windows::Forms::Label());
 			this->AHS_Panel_InnerModifyMenu = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->AHS_Panel_OuterModifyMenu = (gcnew System::Windows::Forms::Panel());
-			this->AHS_L_ModifyMenu = (gcnew System::Windows::Forms::Label());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->AHS_Panel_Controls = (gcnew System::Windows::Forms::Panel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->AHS_BTN_ModifyMenu = (gcnew System::Windows::Forms::Button());
+			this->AHS_BTN_ModifyUser = (gcnew System::Windows::Forms::Button());
 			this->AHS_Panel_Parent->SuspendLayout();
-			this->AHS_Panel_Controls->SuspendLayout();
-			this->AHS_Panel_UsernamePanel->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->AHS_PB_UserImage))->BeginInit();
+			this->AHS_Panel_OuterModifyMenu->SuspendLayout();
 			this->AHS_Panel_InnerModifyMenu->SuspendLayout();
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
-			this->AHS_Panel_OuterModifyMenu->SuspendLayout();
+			this->panel2->SuspendLayout();
+			this->AHS_Panel_Controls->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// AHS_Panel_Parent
 			// 
 			this->AHS_Panel_Parent->BackColor = System::Drawing::Color::Transparent;
-			this->AHS_Panel_Parent->Controls->Add(this->AHS_Panel_Bill);
+			this->AHS_Panel_Parent->Controls->Add(this->AHS_Panel_OuterModifyMenu);
+			this->AHS_Panel_Parent->Controls->Add(this->panel2);
 			this->AHS_Panel_Parent->Controls->Add(this->AHS_Panel_Controls);
-			this->AHS_Panel_Parent->Location = System::Drawing::Point(-2, -3);
+			this->AHS_Panel_Parent->Location = System::Drawing::Point(-3, -4);
+			this->AHS_Panel_Parent->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->AHS_Panel_Parent->Name = L"AHS_Panel_Parent";
-			this->AHS_Panel_Parent->Size = System::Drawing::Size(927, 555);
+			this->AHS_Panel_Parent->Size = System::Drawing::Size(1291, 683);
 			this->AHS_Panel_Parent->TabIndex = 0;
-			// 
-			// AHS_Panel_Bill
-			// 
-			this->AHS_Panel_Bill->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->AHS_Panel_Bill->Location = System::Drawing::Point(724, 3);
-			this->AHS_Panel_Bill->Name = L"AHS_Panel_Bill";
-			this->AHS_Panel_Bill->Size = System::Drawing::Size(200, 537);
-			this->AHS_Panel_Bill->TabIndex = 5;
-			// 
-			// AHS_Panel_Controls
-			// 
-			this->AHS_Panel_Controls->BackColor = System::Drawing::Color::BlanchedAlmond;
-			this->AHS_Panel_Controls->Controls->Add(this->AHS_Panel_UsernamePanel);
-			this->AHS_Panel_Controls->Controls->Add(this->AHS_BTN_ModifyMenu);
-			this->AHS_Panel_Controls->Controls->Add(this->AHS_BTN_ModifyUser);
-			this->AHS_Panel_Controls->Location = System::Drawing::Point(2, 75);
-			this->AHS_Panel_Controls->Margin = System::Windows::Forms::Padding(2);
-			this->AHS_Panel_Controls->Name = L"AHS_Panel_Controls";
-			this->AHS_Panel_Controls->Size = System::Drawing::Size(163, 396);
-			this->AHS_Panel_Controls->TabIndex = 3;
-			// 
-			// AHS_Panel_UsernamePanel
-			// 
-			this->AHS_Panel_UsernamePanel->Controls->Add(this->AHS_PB_UserImage);
-			this->AHS_Panel_UsernamePanel->Controls->Add(this->AHS_L_Username);
-			this->AHS_Panel_UsernamePanel->Location = System::Drawing::Point(6, 262);
-			this->AHS_Panel_UsernamePanel->Margin = System::Windows::Forms::Padding(2);
-			this->AHS_Panel_UsernamePanel->Name = L"AHS_Panel_UsernamePanel";
-			this->AHS_Panel_UsernamePanel->Size = System::Drawing::Size(150, 80);
-			this->AHS_Panel_UsernamePanel->TabIndex = 10;
-			// 
-			// AHS_PB_UserImage
-			// 
-			this->AHS_PB_UserImage->Location = System::Drawing::Point(0, 27);
-			this->AHS_PB_UserImage->Margin = System::Windows::Forms::Padding(2);
-			this->AHS_PB_UserImage->Name = L"AHS_PB_UserImage";
-			this->AHS_PB_UserImage->Size = System::Drawing::Size(65, 51);
-			this->AHS_PB_UserImage->TabIndex = 10;
-			this->AHS_PB_UserImage->TabStop = false;
-			// 
-			// AHS_L_Username
-			// 
-			this->AHS_L_Username->AutoSize = true;
-			this->AHS_L_Username->Location = System::Drawing::Point(70, 45);
-			this->AHS_L_Username->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->AHS_L_Username->Name = L"AHS_L_Username";
-			this->AHS_L_Username->Size = System::Drawing::Size(55, 13);
-			this->AHS_L_Username->TabIndex = 9;
-			this->AHS_L_Username->Text = L"Username";
-			// 
-			// AHS_BTN_ModifyMenu
-			// 
-			this->AHS_BTN_ModifyMenu->BackColor = System::Drawing::Color::Transparent;
-			this->AHS_BTN_ModifyMenu->Location = System::Drawing::Point(8, 187);
-			this->AHS_BTN_ModifyMenu->Margin = System::Windows::Forms::Padding(2);
-			this->AHS_BTN_ModifyMenu->Name = L"AHS_BTN_ModifyMenu";
-			this->AHS_BTN_ModifyMenu->Size = System::Drawing::Size(148, 38);
-			this->AHS_BTN_ModifyMenu->TabIndex = 3;
-			this->AHS_BTN_ModifyMenu->Text = L"Modify Menu";
-			this->AHS_BTN_ModifyMenu->UseVisualStyleBackColor = false;
-			this->AHS_BTN_ModifyMenu->Click += gcnew System::EventHandler(this, &AdminHomeScreen::AHS_BTN_ModifyMenu_Click);
-			// 
-			// AHS_BTN_ModifyUser
-			// 
-			this->AHS_BTN_ModifyUser->BackColor = System::Drawing::Color::Transparent;
-			this->AHS_BTN_ModifyUser->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->AHS_BTN_ModifyUser->Location = System::Drawing::Point(8, 137);
-			this->AHS_BTN_ModifyUser->Margin = System::Windows::Forms::Padding(2);
-			this->AHS_BTN_ModifyUser->Name = L"AHS_BTN_ModifyUser";
-			this->AHS_BTN_ModifyUser->Size = System::Drawing::Size(148, 37);
-			this->AHS_BTN_ModifyUser->TabIndex = 7;
-			this->AHS_BTN_ModifyUser->Text = L"Modify User";
-			this->AHS_BTN_ModifyUser->UseVisualStyleBackColor = false;
-			// 
-			// printDialog1
-			// 
-			this->printDialog1->UseEXDialog = true;
-			// 
-			// AHS_Panel_InnerModifyMenu
-			// 
-			this->AHS_Panel_InnerModifyMenu->AutoScroll = true;
-			this->AHS_Panel_InnerModifyMenu->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->AHS_Panel_InnerModifyMenu->Controls->Add(this->panel1);
-			this->AHS_Panel_InnerModifyMenu->Location = System::Drawing::Point(0, 72);
-			this->AHS_Panel_InnerModifyMenu->Name = L"AHS_Panel_InnerModifyMenu";
-			this->AHS_Panel_InnerModifyMenu->Size = System::Drawing::Size(548, 462);
-			this->AHS_Panel_InnerModifyMenu->TabIndex = 4;
-			// 
-			// panel1
-			// 
-			this->panel1->BackColor = System::Drawing::Color::IndianRed;
-			this->panel1->Controls->Add(this->label1);
-			this->panel1->Controls->Add(this->pictureBox1);
-			this->panel1->Location = System::Drawing::Point(3, 3);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(255, 199);
-			this->panel1->TabIndex = 0;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label1->Location = System::Drawing::Point(12, 76);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(230, 37);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"Add New Item";
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Location = System::Drawing::Point(4, 4);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(248, 192);
-			this->pictureBox1->TabIndex = 0;
-			this->pictureBox1->TabStop = false;
-			this->pictureBox1->Click += gcnew System::EventHandler(this, &AdminHomeScreen::pictureBox1_Click);
 			// 
 			// AHS_Panel_OuterModifyMenu
 			// 
 			this->AHS_Panel_OuterModifyMenu->BackColor = System::Drawing::Color::BlanchedAlmond;
 			this->AHS_Panel_OuterModifyMenu->Controls->Add(this->AHS_L_ModifyMenu);
 			this->AHS_Panel_OuterModifyMenu->Controls->Add(this->AHS_Panel_InnerModifyMenu);
-			this->AHS_Panel_OuterModifyMenu->Location = System::Drawing::Point(168, 0);
+			this->AHS_Panel_OuterModifyMenu->Location = System::Drawing::Point(173, 2);
+			this->AHS_Panel_OuterModifyMenu->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->AHS_Panel_OuterModifyMenu->Name = L"AHS_Panel_OuterModifyMenu";
-			this->AHS_Panel_OuterModifyMenu->Size = System::Drawing::Size(548, 534);
+			this->AHS_Panel_OuterModifyMenu->Size = System::Drawing::Size(1117, 679);
 			this->AHS_Panel_OuterModifyMenu->TabIndex = 6;
+			this->AHS_Panel_OuterModifyMenu->Visible = false;
 			// 
 			// AHS_L_ModifyMenu
 			// 
@@ -241,37 +134,179 @@ namespace POS {
 			this->AHS_L_ModifyMenu->Font = (gcnew System::Drawing::Font(L"Sitka Heading", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->AHS_L_ModifyMenu->ForeColor = System::Drawing::Color::OrangeRed;
-			this->AHS_L_ModifyMenu->Location = System::Drawing::Point(99, 0);
+			this->AHS_L_ModifyMenu->Location = System::Drawing::Point(297, 4);
+			this->AHS_L_ModifyMenu->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->AHS_L_ModifyMenu->Name = L"AHS_L_ModifyMenu";
-			this->AHS_L_ModifyMenu->Size = System::Drawing::Size(357, 69);
+			this->AHS_L_ModifyMenu->Size = System::Drawing::Size(445, 87);
 			this->AHS_L_ModifyMenu->TabIndex = 5;
 			this->AHS_L_ModifyMenu->Text = L"MODIFY MENU";
 			this->AHS_L_ModifyMenu->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
+			// AHS_Panel_InnerModifyMenu
+			// 
+			this->AHS_Panel_InnerModifyMenu->AutoScroll = true;
+			this->AHS_Panel_InnerModifyMenu->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->AHS_Panel_InnerModifyMenu->Controls->Add(this->panel1);
+			this->AHS_Panel_InnerModifyMenu->Location = System::Drawing::Point(4, 89);
+			this->AHS_Panel_InnerModifyMenu->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->AHS_Panel_InnerModifyMenu->Name = L"AHS_Panel_InnerModifyMenu";
+			this->AHS_Panel_InnerModifyMenu->Size = System::Drawing::Size(1109, 582);
+			this->AHS_Panel_InnerModifyMenu->TabIndex = 4;
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::IndianRed;
+			this->panel1->Controls->Add(this->label1);
+			this->panel1->Controls->Add(this->label3);
+			this->panel1->Controls->Add(this->pictureBox1);
+			this->panel1->Location = System::Drawing::Point(4, 4);
+			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(340, 245);
+			this->panel1->TabIndex = 0;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label1->Location = System::Drawing::Point(17, 63);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(281, 46);
+			this->label1->TabIndex = 1;
+			this->label1->Text = L"Add New Item";
+			this->label1->Click += gcnew System::EventHandler(this, &AdminHomeScreen::pictureBox1_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 72, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label3->Location = System::Drawing::Point(103, 80);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(128, 135);
+			this->label3->TabIndex = 2;
+			this->label3->Text = L"+";
+			this->label3->Click += gcnew System::EventHandler(this, &AdminHomeScreen::pictureBox1_Click);
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox1->Location = System::Drawing::Point(5, 5);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(331, 236);
+			this->pictureBox1->TabIndex = 0;
+			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &AdminHomeScreen::pictureBox1_Click);
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::BlanchedAlmond;
+			this->panel2->Controls->Add(this->label2);
+			this->panel2->Location = System::Drawing::Point(173, 4);
+			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(1109, 679);
+			this->panel2->TabIndex = 7;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Sitka Heading", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::OrangeRed;
+			this->label2->Location = System::Drawing::Point(285, 251);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(485, 87);
+			this->label2->TabIndex = 5;
+			this->label2->Text = L"Welcome Admin!";
+			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// AHS_Panel_Controls
+			// 
+			this->AHS_Panel_Controls->BackColor = System::Drawing::Color::BlanchedAlmond;
+			this->AHS_Panel_Controls->Controls->Add(this->button1);
+			this->AHS_Panel_Controls->Controls->Add(this->AHS_BTN_ModifyMenu);
+			this->AHS_Panel_Controls->Controls->Add(this->AHS_BTN_ModifyUser);
+			this->AHS_Panel_Controls->Location = System::Drawing::Point(3, 2);
+			this->AHS_Panel_Controls->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->AHS_Panel_Controls->Name = L"AHS_Panel_Controls";
+			this->AHS_Panel_Controls->Size = System::Drawing::Size(164, 678);
+			this->AHS_Panel_Controls->TabIndex = 3;
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Transparent;
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button1->Location = System::Drawing::Point(11, 223);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(140, 46);
+			this->button1->TabIndex = 11;
+			this->button1->Text = L"Home";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &AdminHomeScreen::button1_Click);
+			// 
+			// AHS_BTN_ModifyMenu
+			// 
+			this->AHS_BTN_ModifyMenu->BackColor = System::Drawing::Color::Transparent;
+			this->AHS_BTN_ModifyMenu->Location = System::Drawing::Point(11, 364);
+			this->AHS_BTN_ModifyMenu->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->AHS_BTN_ModifyMenu->Name = L"AHS_BTN_ModifyMenu";
+			this->AHS_BTN_ModifyMenu->Size = System::Drawing::Size(140, 47);
+			this->AHS_BTN_ModifyMenu->TabIndex = 3;
+			this->AHS_BTN_ModifyMenu->Text = L"Modify Menu";
+			this->AHS_BTN_ModifyMenu->UseVisualStyleBackColor = false;
+			this->AHS_BTN_ModifyMenu->Click += gcnew System::EventHandler(this, &AdminHomeScreen::AHS_BTN_ModifyMenu_Click);
+			// 
+			// AHS_BTN_ModifyUser
+			// 
+			this->AHS_BTN_ModifyUser->BackColor = System::Drawing::Color::Transparent;
+			this->AHS_BTN_ModifyUser->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->AHS_BTN_ModifyUser->Location = System::Drawing::Point(11, 290);
+			this->AHS_BTN_ModifyUser->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->AHS_BTN_ModifyUser->Name = L"AHS_BTN_ModifyUser";
+			this->AHS_BTN_ModifyUser->Size = System::Drawing::Size(140, 46);
+			this->AHS_BTN_ModifyUser->TabIndex = 7;
+			this->AHS_BTN_ModifyUser->Text = L"Modify User";
+			this->AHS_BTN_ModifyUser->UseVisualStyleBackColor = false;
+			this->AHS_BTN_ModifyUser->Click += gcnew System::EventHandler(this, &AdminHomeScreen::AHS_BTN_ModifyUser_Click);
+			// 
 			// AdminHomeScreen
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(924, 549);
-			this->Controls->Add(this->AHS_Panel_OuterModifyMenu);
+			this->ClientSize = System::Drawing::Size(1292, 684);
 			this->Controls->Add(this->AHS_Panel_Parent);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->MaximizeBox = false;
 			this->Name = L"AdminHomeScreen";
 			this->Text = L"AdminHomeScreen";
 			this->AHS_Panel_Parent->ResumeLayout(false);
-			this->AHS_Panel_Controls->ResumeLayout(false);
-			this->AHS_Panel_UsernamePanel->ResumeLayout(false);
-			this->AHS_Panel_UsernamePanel->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->AHS_PB_UserImage))->EndInit();
+			this->AHS_Panel_OuterModifyMenu->ResumeLayout(false);
+			this->AHS_Panel_OuterModifyMenu->PerformLayout();
 			this->AHS_Panel_InnerModifyMenu->ResumeLayout(false);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
-			this->AHS_Panel_OuterModifyMenu->ResumeLayout(false);
-			this->AHS_Panel_OuterModifyMenu->PerformLayout();
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
+			this->AHS_Panel_Controls->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -280,6 +315,7 @@ namespace POS {
 
 private: System::Void AHS_BTN_ModifyMenu_Click(System::Object^ sender, System::EventArgs^ e) {
 	// Set Visibility to true
+	this->panel2->Visible = false;
 	AHS_Panel_OuterModifyMenu->Visible = true;
 	int CheckforChange = 0;
 	List<ManageMenu^>^ MenuList = gcnew List<ManageMenu^>;
@@ -378,6 +414,17 @@ private: System::Void AHS_BTN_ModifyMenu_Click(System::Object^ sender, System::E
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 	ModifyMenu^ modifymenu = gcnew ModifyMenu;
 	modifymenu->ShowDialog();
+}
+	   // On Clicking Modify User
+private: System::Void AHS_BTN_ModifyUser_Click(System::Object^ sender, System::EventArgs^ e) {
+	RegisterEmployee^ regEmp = gcnew RegisterEmployee;
+	regEmp->ShowDialog();
+}
+	   // on clicking Home
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->AHS_Panel_OuterModifyMenu->Visible = false;
+	this->panel2->Visible = true;
+
 }
 };
 }

@@ -4,18 +4,18 @@ using namespace System;
 
 String^ User::GetUsername()
 {
-    return this->username;
+    return username;
 }
-void User::SetUsername(String^ username)
+void User::SetUsername(String^ newUsername)
 {
-    this->username = username;
+    username = newUsername;
 }
 String^ User::GetPassword()
 {
-    return this->password;
+    return password;
 }
-void User::SetPassword(String^ passwor)
+void User::SetPassword(String^ newPassword)
 {
-    this->password = password;
+    password = newPassword;
 }
 
